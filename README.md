@@ -39,15 +39,15 @@ Tipo de saída:
 
 ## 3. Personas
 
-### Persona 1 - Operador de Colheitadeira
+#### Persona 1 - Operador de Colheitadeira
 
 Profissional que opera o equipamento em campo. Experiência prática consolidada, decisões de curto prazo sob pressão de janela operacional. Precisa de informação rápida e clara antes de entrar na lavoura, recomendação objetiva (vai / não vai / ajusta rota), e confiança de que o sistema considera as condições reais do dia. A solução entrega um alerta visual simples no app antes de ligar o equipamento, reduzindo a chance de entrar em área de risco que não estava óbvia visualmente.
 
-### Persona 2 - Gestor da Fazenda
+#### Persona 2 - Gestor da Fazenda
 
 Responsável pelo planejamento operacional da propriedade. Coordena múltiplos equipamentos, operadores e glebas. Pensa na janela de colheita, custo e cronograma. Precisa de visão consolidada do risco em todas as glebas, capacidade de priorizar quais áreas operar primeiro, e histórico de eventos para aprender padrões da propriedade. A solução entrega um dashboard com mapa de risco da fazenda, filtros por equipamento e gleba, permitindo replanejar a ordem das operações.
 
-### Persona 3 - Analista de Risco da Seguradora
+#### Persona 3 - Analista de Risco da Seguradora
 
 Profissional da Sompo, responsável por avaliar exposição ao risco e calcular prêmios. Trabalha com dados agregados. Precisa de dados anonimizados sobre padrões de risco por região, tipo de solo e equipamento, indicadores de sinistralidade preditiva, e evidência de que clientes que usam a solução têm menor sinistralidade. A solução entrega relatórios agregados e um painel analítico para cruzar fatores de risco com sinistralidade real.
 
