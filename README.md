@@ -95,7 +95,7 @@ As variáveis foram organizadas em cinco categorias principais:
 
 #### 4.4 - Exemplo de Dataset Simulado
 
-Exemplo de dataset: data/dataset_exemplo.csv
+Exemplo de dataset: [dataset_exemplo.csv](data/dataset_exemplo.csv)
 
 ---
 
