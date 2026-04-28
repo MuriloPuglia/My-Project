@@ -171,9 +171,9 @@ O sistema contará com um dashboard que apresenta:
 
 
 |      AgroRisk AI Dashboard      |
-|----------------------------------|
+|---------------------------------|
 | 🔴 Risco: 82 (ALTO)             |
-|----------------------------------|
+|---------------------------------|
 | 🌧 Clima: Chuva forte           |
 | 🌱 Solo: Muito úmido            |
 | 🚜 Operação: Colheita           |
