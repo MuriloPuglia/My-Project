@@ -55,7 +55,7 @@ Profissional da Sompo, responsável por avaliar exposição ao risco e calcular 
 
 ## 4. Estruturação dos Dados
 
-### 4.1 - Definição dos Dados
+#### 4.1 - Definição dos Dados
 
 Foi desenvolvido um conjunto de dados simulado representando condições reais de operação de máquinas agrícolas, com foco na previsão de risco de atolamento em áreas próximas a corpos d’água após períodos de chuva.
 
@@ -63,7 +63,7 @@ As variáveis foram definidas com base em fatores ambientais e operacionais que 
 
 ---
 
-### 4.2 - Organização das Variáveis:
+#### 4.2 - Organização das Variáveis:
 
 As variáveis foram organizadas em cinco categorias principais:
 
@@ -75,7 +75,7 @@ As variáveis foram organizadas em cinco categorias principais:
   
 ---
 
-### 4.3 - Tabela das Variáveis
+#### 4.3 - Tabela das Variáveis
 
 | Variável | Tipo | Unidade | Descrição | Faixa Esperada |
 |----------|------|--------|----------|----------------|
@@ -93,13 +93,13 @@ As variáveis foram organizadas em cinco categorias principais:
 
 ---
 
-### 4.4 - Exemplo de Dataset Simulado
+#### 4.4 - Exemplo de Dataset Simulado
 
 Exemplo de dataset: data/dataset_exemplo.csv
 
 ---
 
-### 4.5 - Lógica dos Dados
+#### 4.5 - Lógica dos Dados
 
 Os dados foram simulados com base em relações plausíveis observadas no contexto agrícola:
 
@@ -115,7 +115,7 @@ A variável **ocorrencia_atolamento** representa o resultado final, sendo utiliz
 
 ---
 
-### 4.6 - Cenários de Risco
+#### 4.6 - Cenários de Risco
 
 Com base nas relações definidas no dataset, alguns cenários apresentam maior probabilidade de atolamento:
 
@@ -129,7 +129,7 @@ Essas condições não são regras fixas, mas representam padrões que aumentam 
 
 ---
 
-### 4. 7 - Origem dos Dados Simulados
+#### 4. 7 - Origem dos Dados Simulados
 
 Os dados são simulados, mas baseados em padrões plausíveis do mundo real.
 
