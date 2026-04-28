@@ -176,9 +176,8 @@ AgroRisk AI Dashboard:
 | 🌧 Clima: Chuva forte           |
 | 🌱 Solo: Muito úmido            |
 | 🚜 Operação: Colheita           |
-|----------------------------------|
 | ⚠️ Recomendação: NÃO OPERAR     |
-+----------------------------------+
+
 
 Esse exemplo ilustra como o usuário (operador ou gestor) visualizaria as informações e tomaria decisões com base nos alertas gerados pelo sistema.
 
