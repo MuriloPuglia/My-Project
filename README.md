@@ -169,8 +169,9 @@ O sistema contará com um dashboard que apresenta:
   
 🔍 Exemplo de visualização (wireframe simples)
 
-AgroRisk AI Dashboard:
 
+|      AgroRisk AI Dashboard      |
+|----------------------------------|
 | 🔴 Risco: 82 (ALTO)             |
 |----------------------------------|
 | 🌧 Clima: Chuva forte           |
