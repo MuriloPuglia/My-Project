@@ -1,91 +1,206 @@
 
 
-# 🚀 AgroRisk-AI
+# 🌾 AgroRisk AI
+
+## 📌 Descrição do Problema
+
+O setor agrícola enfrenta desafios significativos relacionados à previsibilidade de riscos operacionais no uso de equipamentos. Atualmente, muitas decisões ainda são tomadas de forma reativa, ou seja, após a ocorrência de falhas, acidentes ou danos.
+
+Situações como operação em solo instável após períodos de chuva, proximidade com corpos d’água e transporte em terrenos irregulares aumentam significativamente o risco de:
+
+* Atolamento de máquinas
+* Danos mecânicos
+* Acidentes operacionais
+* Perda total de equipamentos
+
+A ausência de sistemas inteligentes que integrem dados ambientais e operacionais dificulta a prevenção desses riscos, gerando prejuízos financeiros, operacionais e até impactos ambientais.
+
+---
+
+## 💡 Solução Proposta
+
+O **AgroRisk AI** é uma solução baseada em dados e Inteligência Artificial que tem como objetivo prever riscos operacionais antes da execução de atividades agrícolas.
+
+O sistema analisa variáveis ambientais e operacionais para gerar um **Risk Score (0 a 100)** e classificar o nível de risco em:
+
+* 🟢 Baixo risco
+* 🟡 Médio risco
+* 🔴 Alto risco
+
+Além disso, o sistema fornece recomendações como:
+
+* Adiar operação
+* Alterar rota
+* Reduzir carga da máquina
+
+Essa abordagem permite transformar decisões reativas em ações preventivas, reduzindo custos e aumentando a eficiência operacional.
+
+---
+
+## 👤 Personas
+
+### 👨‍🌾 Operador
+
+* Precisa saber se é seguro operar o equipamento
+* Recebe alertas antes da execução da atividade
+* Toma decisões rápidas em campo
+
+### 👨‍💼 Gestor Agrícola
+
+* Planeja operações e alocação de máquinas
+* Busca reduzir custos com manutenção e falhas
+* Precisa de visão estratégica dos riscos
+
+### 🏢 Seguradora (Sompo)
+
+* Interesse em prever sinistros
+* Avalia riscos para precificação de seguros
+* Busca reduzir prejuízos com indenizações
+
+---
 
 ## 📊 Estruturação dos Dados
 
-### 📌 Definição dos Dados
+O sistema utiliza dados simulados que representam condições reais de operação agrícola.
 
-Foi desenvolvido um conjunto de dados simulado representando condições reais de operação de máquinas agrícolas, com foco na previsão de risco de atolamento em áreas próximas a corpos d’água após períodos de chuva.
+### Principais variáveis:
 
-As variáveis foram definidas com base em fatores ambientais e operacionais que influenciam diretamente esse risco, permitindo representar diferentes cenários de operação.
+| Variável          | Descrição                                   |
+| ----------------- | ------------------------------------------- |
+| rainfall          | Volume de chuva recente (mm)                |
+| soil_moisture     | Umidade do solo (%)                         |
+| slope             | Inclinação do terreno                       |
+| distance_to_water | Distância de rios ou lagos (m)              |
+| machine_age       | Idade do equipamento (anos)                 |
+| operation_type    | Tipo de operação (colheita/transporte)      |
+| risk              | Classificação de risco (baixo, médio, alto) |
 
----
-
-### 🧠 Organização das Variáveis
-
-As variáveis foram organizadas em cinco categorias principais:
-
-- **Clima**: chuva acumulada e temperatura  
-- **Solo**: tipo e umidade do solo  
-- **Localização**: distância até corpos d’água  
-- **Operação**: peso do equipamento, tipo de pneu e horário da operação  
-- **Histórico**: ocorrências anteriores de atolamento  
+📁 Dataset disponível em: `data/sample_dataset.csv`
 
 ---
 
-### 🧾 Tabela de Variáveis
+## 🏗️ Arquitetura da Solução
 
-| Variável | Tipo | Unidade | Descrição | Faixa Esperada |
-|----------|------|--------|----------|----------------|
-| chuva_72h | Numérico | mm | Chuva acumulada nas últimas 72 horas | 0 – 120 |
-| tipo_solo | Categórico | - | Tipo de solo (argiloso, arenoso, franco, misto) | - |
-| umidade_solo | Numérico | % | Umidade estimada do solo | 20 – 100 |
-| declividade | Numérico | % | Inclinação do terreno | 0 – 15 |
-| distancia_agua | Numérico | m | Distância até corpo d’água mais próximo | 1 – 300 |
-| peso_equipamento | Numérico | kg | Peso da máquina agrícola | 5000 – 15000 |
-| tipo_pneu | Categórico | - | Tipo de pneu (esteira, padrão, alta flutuação) | - |
-| hora_operacao | Numérico | hora | Hora do dia da operação | 0 – 23 |
-| historico_atolamentos | Numérico | contagem | Ocorrências nos últimos 12 meses | 0 – 10 |
-| temperatura | Numérico | °C | Temperatura ambiente | 10 – 40 |
-| ocorrencia_atolamento | Binário | - | 0 = não atolou / 1 = atolou | - |
+O sistema segue o seguinte fluxo de dados:
 
----
+1. Coleta de dados
 
-### 📄 Exemplo de Dataset Simulado
+   * APIs de clima
+   * Sensores (simulados)
+   * Histórico de operações
 
-📁 Exemplo de dataset: [dataset_exemplo.csv](data/dataset_exemplo.csv)
+2. Processamento
 
----
+   * Limpeza e organização dos dados
 
-### 🧠 Lógica dos Dados
+3. Modelo de IA
 
-Os dados foram simulados com base em relações plausíveis observadas no contexto agrícola:
+   * Análise das variáveis
+   * Geração de score de risco
 
-- Maior volume de chuva → aumento da umidade do solo → maior risco  
-- Solos argilosos → maior retenção de água → maior risco  
-- Menor distância de corpos d’água → maior instabilidade do solo  
-- Maior declividade do terreno → aumento do risco de instabilidade e atolamento  
-- Maior peso da máquina → maior pressão sobre o solo  
-- Tipo de pneu influencia diretamente a tração e estabilidade  
-- Temperatura influencia indiretamente a umidade do solo  
+4. Saída
 
-A variável **ocorrencia_atolamento** representa o resultado final, sendo utilizada como variável alvo para um problema de **classificação de risco em IA supervisionada**.
+   * Dashboard
+   * Alertas e recomendações
+
+📊 Diagrama disponível em: `docs/architecture.png`
 
 ---
 
-### 📈 Cenários de Risco
+## 🤖 Proposta do Modelo Preditivo
 
-Com base nas relações definidas no dataset, alguns cenários apresentam maior probabilidade de atolamento:
+O modelo proposto é baseado em **classificação de risco**.
 
-- Se **chuva_72h alta** e **umidade_solo elevada** → maior risco  
-- Se **tipo_solo = argiloso** → maior retenção de água  
-- Se **distancia_agua baixa** → solo mais saturado  
-- Se **declividade elevada** → maior instabilidade do terreno  
-- Se **peso_equipamento alto** em solo úmido → maior pressão  
+### Entrada:
 
-Essas condições não são regras fixas, mas representam padrões que aumentam a probabilidade de ocorrência de atolamento.
+* Dados ambientais (clima, solo)
+* Dados operacionais (tipo de operação)
+* Histórico do equipamento
+
+### Saída:
+
+* Classificação: Baixo / Médio / Alto
+  OU
+* Score de risco (0 a 100)
+
+### Justificativa:
+
+A classificação permite decisões rápidas e intuitivas para operadores e gestores, facilitando a prevenção de riscos.
 
 ---
 
-## 🔎 Origem dos Dados Simulados
+## 🖥️ Interface da Solução
 
-Os dados são simulados, mas baseados em padrões plausíveis do mundo real.
+O sistema contará com um dashboard que apresenta:
 
-Foram considerados:
+* Score de risco em tempo real
+* Indicadores visuais por cores
+* Alertas automáticos
+* Recomendações operacionais
 
-- volumes de chuva típicos de dados meteorológicos  
-- comportamento de diferentes tipos de solo  
-- características operacionais de máquinas agrícolas  
+---
 
-As faixas foram definidas para representar condições realistas de operação, garantindo coerência para análise e modelagem.
+## 🔐 Segurança
+
+* Controle de acesso por perfil de usuário
+* Proteção de dados em ambiente seguro
+* Registro de logs de operação
+* Garantia de integridade dos dados
+
+---
+
+## 📅 Planejamento das Próximas Etapas
+
+### Sprint 2:
+
+* Criação do dataset completo
+* Implementação inicial do modelo de IA
+
+### Sprint 3:
+
+* Desenvolvimento do dashboard
+* Integração dos dados
+
+### Sprint Final:
+
+* Protótipo funcional
+* Testes e validação
+
+---
+
+## 👥 Divisão de Tarefas
+
+* Pessoa 1: Documentação e personas
+* Pessoa 2: Dados e dataset
+* Pessoa 3: Modelo preditivo
+* Pessoa 4: Arquitetura e segurança
+* Pessoa 5: Repositório, README, vídeo e gestão
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+AgroRisk-AI/
+│
+├── README.md
+├── data/
+├── docs/
+├── presentation/
+└── video/
+```
+
+---
+
+## 🎥 Vídeo de Apresentação
+
+📌 Link do vídeo: (adicionar link aqui)
+
+---
+
+## 🚀 Conclusão
+
+O AgroRisk AI propõe uma abordagem inovadora para o setor agrícola, utilizando dados e Inteligência Artificial para antecipar riscos e melhorar a tomada de decisão.
+
+A solução contribui para a redução de prejuízos, aumento da eficiência operacional e maior segurança no uso de equipamentos agrícolas.
+
