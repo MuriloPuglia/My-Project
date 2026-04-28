@@ -60,7 +60,9 @@ Profissional da Sompo, responsável por avaliar exposição ao risco e calcular 
 Foi desenvolvido um conjunto de dados simulado representando condições reais de operação de máquinas agrícolas, com foco na previsão de risco de atolamento em áreas próximas a corpos d’água após períodos de chuva.
 
 As variáveis foram definidas com base em fatores ambientais e operacionais que influenciam diretamente esse risco, permitindo representar diferentes cenários de operação.
+
 ---
+
 ### 4.2 - Organização das Variáveis:
 
 As variáveis foram organizadas em cinco categorias principais:
@@ -69,8 +71,10 @@ As variáveis foram organizadas em cinco categorias principais:
 - **Solo**: tipo e umidade do solo  
 - **Localização**: distância até corpos d’água  
 - **Operação**: peso do equipamento, tipo de pneu e horário da operação  
-- **Histórico**: ocorrências anteriores de atolamento 
+- **Histórico**: ocorrências anteriores de atolamento
+  
 ---
+
 ### 4.3 - Tabela das Variáveis
 
 | Variável | Tipo | Unidade | Descrição | Faixa Esperada |
@@ -86,11 +90,15 @@ As variáveis foram organizadas em cinco categorias principais:
 | historico_atolamentos | Numérico | contagem | Ocorrências nos últimos 12 meses | 0 – 10 |
 | temperatura | Numérico | °C | Temperatura ambiente | 10 – 40 |
 | ocorrencia_atolamento | Binário | - | 0 = não atolou / 1 = atolou | - |
+
 ---
+
 ### 4.4 - Exemplo de Dataset Simulado
 
 Exemplo de dataset: data/dataset_exemplo.csv
+
 ---
+
 ### 4.5 - Lógica dos Dados
 
 Os dados foram simulados com base em relações plausíveis observadas no contexto agrícola:
@@ -104,7 +112,9 @@ Os dados foram simulados com base em relações plausíveis observadas no contex
 - Temperatura influencia indiretamente a umidade do solo  
 
 A variável **ocorrencia_atolamento** representa o resultado final, sendo utilizada como variável alvo para um problema de **classificação de risco em IA supervisionada**.
+
 ---
+
 ### 4.6 - Cenários de Risco
 
 Com base nas relações definidas no dataset, alguns cenários apresentam maior probabilidade de atolamento:
@@ -116,7 +126,9 @@ Com base nas relações definidas no dataset, alguns cenários apresentam maior 
 - Se **peso_equipamento alto** em solo úmido → maior pressão  
 
 Essas condições não são regras fixas, mas representam padrões que aumentam a probabilidade de ocorrência de atolamento.
+
 ---
+
 ### 4. 7 - Origem dos Dados Simulados
 
 Os dados são simulados, mas baseados em padrões plausíveis do mundo real.
