@@ -43,11 +43,11 @@ Tipo de saída:
 
 Profissional que opera o equipamento em campo. Experiência prática consolidada, decisões de curto prazo sob pressão de janela operacional. Precisa de informação rápida e clara antes de entrar na lavoura, recomendação objetiva (vai / não vai / ajusta rota), e confiança de que o sistema considera as condições reais do dia. A solução entrega um alerta visual simples no app antes de ligar o equipamento, reduzindo a chance de entrar em área de risco que não estava óbvia visualmente.
 
-### 👨‍💼 Persona 2 - Gestor da Fazenda
+### Persona 2 - Gestor da Fazenda
 
 Responsável pelo planejamento operacional da propriedade. Coordena múltiplos equipamentos, operadores e glebas. Pensa na janela de colheita, custo e cronograma. Precisa de visão consolidada do risco em todas as glebas, capacidade de priorizar quais áreas operar primeiro, e histórico de eventos para aprender padrões da propriedade. A solução entrega um dashboard com mapa de risco da fazenda, filtros por equipamento e gleba, permitindo replanejar a ordem das operações.
 
-### 🏢 Persona 3 - Analista de Risco da Seguradora
+### Persona 3 - Analista de Risco da Seguradora
 
 Profissional da Sompo, responsável por avaliar exposição ao risco e calcular prêmios. Trabalha com dados agregados. Precisa de dados anonimizados sobre padrões de risco por região, tipo de solo e equipamento, indicadores de sinistralidade preditiva, e evidência de que clientes que usam a solução têm menor sinistralidade. A solução entrega relatórios agregados e um painel analítico para cruzar fatores de risco com sinistralidade real.
 
@@ -72,7 +72,6 @@ As variáveis foram organizadas em cinco categorias principais:
 - **Histórico**: ocorrências anteriores de atolamento 
 
 ### 4.3 - Tabela das Variáveis
-
 
 | Variável | Tipo | Unidade | Descrição | Faixa Esperada |
 |----------|------|--------|----------|----------------|
@@ -129,9 +128,10 @@ Foram considerados:
 - características operacionais de máquinas agrícolas  
 
 As faixas foram definidas para representar condições realistas de operação, garantindo coerência para análise e modelagem.
+
 ---
 
-## 🏗️ Arquitetura da Solução
+## 5. Arquitetura da Solução
 
 Fluxo simples do sistema (precisa da arquitetura pronta)
 
@@ -139,13 +139,13 @@ Diagrama disponível em: `docs/architecture.png`
 
 ---
 
-## 🤖 Proposta do Modelo Preditivo
+## 6. Proposta do Modelo Preditivo
 
 classificação de risco (precisa do modelo preditivo pronto) 
 
 ---
 
-## 🖥️ Interface da Solução
+## 7. Interface da Solução
 
 O sistema contará com um dashboard que apresenta:
 
