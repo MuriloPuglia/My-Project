@@ -176,7 +176,6 @@ O sistema contará com um dashboard que apresenta:
 | 🌧 Clima: Chuva forte           |
 | 🌱 Solo: Muito úmido            |
 | 🚜 Operação: Colheita           |
-
 | ⚠️ Recomendação: NÃO OPERAR     |
 
 
