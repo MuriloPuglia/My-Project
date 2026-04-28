@@ -195,17 +195,17 @@ Esse exemplo ilustra como o usuário (operador ou gestor) visualizaria as inform
 
 ## 9. Planejamento das Próximas Etapas
 
-### Sprint 2:
+#### Sprint 2:
 
 * Criação do dataset completo
 * Implementação inicial do modelo de IA
 
-### Sprint 3:
+#### Sprint 3:
 
 * Desenvolvimento do dashboard
 * Integração dos dados
 
-### Sprint Final:
+#### Sprint Final:
 
 * Protótipo funcional
 * Testes e validação
